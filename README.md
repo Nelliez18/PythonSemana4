@@ -267,5 +267,37 @@ print("Minimo:", estat[0])
 print("Maximo:", estat[1])
 print("Media: %.2f" % estat[2])
 ```
+Prática Independente
 
+Criar lista de nomes: leia os nomes digitados pelo usuário e guarde-os em uma lista (use input() e
+append()).
+```python
 
+```
+Remover duplicatas: converta a lista em conjunto
+com set() para eliminar os nomes repetidos.
+```python
+
+```
+Ordenar alfabeticamente: volte para lista e use
+sorted() para deixar os nomes em ordem de A a Z.
+```python
+
+```
+Criar tupla: monte (primeiro_nome, ultimo_nome) a
+partir da lista ordenada, usando os índices [0] e [-1].
+```python
+
+```
+Exibir relatório final: mostre quantos nomes foram
+digitados, quantos são únicos, a lista ordenada e a
+tupla.
+```python
+
+```
+Versão em Portugol: repita a solução com vetor, laços
+para remover repetidos e ordenação pelo método da
+bolha.
+```python
+
+```
