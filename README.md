@@ -105,5 +105,120 @@ print(frutas)
 frutas = len(frutas) # Retorna a quantidade de itens unicos.
 print(frutas)
 ```
+Operações Fundamentais
+```python
+# lista original de valores
+lista = [10, 5, 20, 3, 42, 7]
+# filtragem com list comprehension
+maiores = [x for x in lista if x > 10]
+print(maiores) # [20, 42]
+# mesma filtragem com filter()
+pares = list(filter(lambda x: x % 2 == 0, lista))
+print(pares) # [10, 20, 42]
+```
+```python
+# lista fora de ordem
+lista = [10, 5, 20, 3]
+# sort() ordena a propria lista
+lista.sort()
+print(lista) # [3, 5, 10, 20]
+# ordem decrescente
+lista.sort(reverse=True)
+print(lista) # [20, 10, 5, 3]
+# sorted() devolve uma nova lista
+nova = sorted(lista)
+```
+```python
+# dois conjuntos de valores
+A = {1, 2, 3}
+B = {3, 4, 5}
+# uniao: tudo de A e de B
+print(A | B) # {1, 2, 3, 4, 5}
+# intersecao: o que ha nos dois
+print(A & B) # {3}
+# diferenca: so o que e de A
+print(A - B) # {1, 2}
+```
+Operações Fundamentais
+
+Manipulação de coleções: Adicionar, Remover, Atualizar, Iterar, Verificar pertencimento
+```python
+# arquivo: adicionar.py
+def adicionar(estoque, produto):
+    # evita duplicidade no estoque
+    if produto not in estoque:
+     estoque.append(produto) # insere
+    return estoque
+# teste rapido do modulo
+if __name__ == "__main__":
+    print(adicionar(["mouse"], "teclado"))
+```
+```python
+# arquivo: remover.py
+def remover(estoque, produto):
+# so remove se o item existir
+    if produto in estoque:
+        estoque.remove(produto)
+    else:
+        print("Produto nao encontrado")
+        return estoque
+if __name__ == "__main__":
+    print(remover(["mouse", "hd"], "hd"))
+```
+```python
+# arquivo: atualizar.py
+def atualizar(estoque, antigo, novo):
+    # localiza o indice do produto
+    if antigo in estoque:
+        i = estoque.index(antigo)
+        estoque[i] = novo # substitui
+        return estoque
+if __name__ == "__main__":
+    print(atualizar(["mose"], "mose",
+                    "mouse"))
+```
+```python
+# arquivo: iterar.py
+def iterar(estoque):
+    # enumerate da indice e valor
+    for i, produto in enumerate(estoque,
+                                start=1):
+
+        print(i, "-", produto)
+    print("Total:", len(estoque))
+if __name__ == "__main__":
+    iterar(["mouse", "teclado"])
+```
+```python
+# arquivo: pertencimento.py
+def existe(estoque, produto):
+    # o operador in devolve True/False
+    return produto in estoque
+if __name__ == "__main__":
+    lista = ["mouse", "teclado"]
+    if existe(lista, "mouse"):
+        print("Ja cadastrado")
+    else:
+        print("Pode comprar")
+```
+```python
+# arquivo: principal.py
+from adicionar import adicionar
+from remover import remover
+from atualizar import atualizar
+from iterar import iterar
+from pertencimento import existe
+estoque = ["mouse", "mose", "hd"]
+adicionar(estoque, "teclado")
+atualizar(estoque, "mose", "mouse2")
+remover(estoque, "hd")
+if existe(estoque, "teclado"):
+    iterar(estoque) # relatorio final
+```
+
+4.5 Exercícios Guiados - 1
+```python
+
+```
 
 
