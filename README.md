@@ -316,7 +316,7 @@ if __name__ == "__main__":
 
 
 
-# VERSÃO INTEGRAL EM PORTUGOL COMENTADA
+# VERSÃO EM PORTUGOL COMENTADA
 #
 # programa {
 #     funcao inicio() {
