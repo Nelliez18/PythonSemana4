@@ -218,7 +218,54 @@ if existe(estoque, "teclado"):
 
 4.5 Exercícios Guiados - 1
 ```python
-
+# Exercicio 1: criar lista de numeros
+numeros = [] # lista vazia
+qtd = int(input("Quantos numeros? "))
+for i in range(qtd):
+    n = int(input("Digite um numero: "))
+    numeros.append(n) # insere no fim
+print("Lista:", numeros)
+print("Tamanho:", len(numeros))
+```
+```python
+# Exercicio 2: filtrar numeros pares
+texto = input("Numeros separados por espaco: ")
+numeros = [int(x) for x in texto.split()]
+# filtra os divisiveis por 2
+pares = [n for n in numeros if n % 2 == 0]
+print("Digitados:", numeros)
+print("Pares:", pares)
+```
+```python
+# Exercicio 3: ordenar a lista
+texto = input("Numeros separados por espaco: ")
+numeros = [int(x) for x in texto.split()]
+numeros.sort() # ordem crescente
+print("Crescente:", numeros)
+# copia ordenada ao contrario
+print("Decrescente:", sorted(numeros,
+                          reverse=True))
+```
+```python
+# Exercicio 4: conjunto sem duplicatas
+texto = input("Palavras separadas por espaco: ")
+palavras = texto.split()
+# set() elimina os repetidos
+unicos = set(palavras)
+print("Digitadas:", len(palavras))
+print("Unicas:", len(unicos))
+print(sorted(unicos))
+```
+```python
+# Exercicio 5: tupla de estatisticas
+texto = input("Notas separadas por espaco: ")
+notas = [float(x) for x in texto.split()]
+# tupla e imutavel: protege o resultado
+estat = (min(notas), max(notas),
+         sum(notas) / len(notas))
+print("Minimo:", estat[0])
+print("Maximo:", estat[1])
+print("Media: %.2f" % estat[2])
 ```
 
 
