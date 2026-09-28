@@ -26,7 +26,6 @@ print(lista[0])
 ```
 Tuplas
 ```python
-# Tuplas
 # declaração da tupla (parenteses)
 ponto = (10, 20 ,30)
 # acesso pelo indice (inicia em 0)
