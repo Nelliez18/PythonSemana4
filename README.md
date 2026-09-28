@@ -23,6 +23,19 @@ lista.append(40)
 print(lista[2])
 lista.reverse()
 print(lista[0])
+lista.insert(1, 70)
+print(lista[1])
+```
+```python
+# lista com os precos dos produtos
+precos = [10.5, 5.0, 3.2]
+# soma todos os itens da lista
+total = sum(precos)
+# exibe o valor total da compra
+print(f"Total: {total}")
+precos.append(2)
+total = sum(precos)
+print(f"Total: {total}")
 ```
 Tuplas
 ```python
